@@ -1,0 +1,153 @@
+.login-page {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Background video */
+.bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  opacity: 0.35;
+  filter: brightness(0.45);
+}
+
+/* Centered container */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  padding: 2rem;
+}
+
+/* Glassmorphic Login Card */
+.login-card {
+  background: rgba(255, 255, 255, 0.12); /* slight transparency */
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(18px); /* blur effect */
+  -webkit-backdrop-filter: blur(18px);
+  border-radius: 16px;
+  padding: 2.5rem;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+  color: #0f172a;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.login-card h2 {
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+/* Input fields */
+.login-card input {
+  width: 100%;
+  padding: 0.9rem 1rem;
+  margin-bottom: 1.2rem;
+  border: none;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.15);
+  color: #0f172a;
+  font-size: 1rem;
+  transition: background 0.2s;
+}
+
+.login-card input:focus {
+  outline: none;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 0 2px #3b82f6;
+}
+
+/* Submit button */
+.login-card button[type="submit"] {
+  width: 100%;
+  padding: 0.9rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #2563eb;
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.login-card button[type="submit"]:hover {
+  background-color: #1e40af;
+}
+
+/* Links under form */
+.login-links {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #0f172a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.link-button {
+  background: none;
+  border: none;
+  color: #1e3a8a;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: underline;
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
+}
+
+.link-button:hover {
+  color: #2563eb;
+}
+
+/* Error message */
+.error-message {
+  color: #dc2626;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+/* Splash screen with blur */
+.splash-screen {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.8); /* dark overlay */
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  animation: fadeOut 1.5s ease-in forwards;
+}
+
+/* Splash emoji style */
+.splash-emoji {
+  font-size: 4.5rem;
+  animation: popUp 0.6s ease;
+  filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.25));
+  color: #38bdf8;
+}
+
+@keyframes fadeOut {
+  0% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { opacity: 0; visibility: hidden; }
+}
+
+@keyframes popUp {
+  0% { transform: scale(0.5); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}

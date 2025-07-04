@@ -1,0 +1,60 @@
+/* src/components/Footer.css */
+.login-footer {
+  background: linear-gradient(to right, #1f98c1, #3b3b98);
+  color: #fff;
+  padding: 1rem;
+  font-size: 1rem;
+  font-style: italic;
+  text-align: center;
+  letter-spacing: 1px;
+  position: relative;
+  font-family: 'Segoe UI', sans-serif;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.footer-item {
+  position: relative;
+  cursor: pointer;
+}
+
+.footer-label {
+  font-weight: bold;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+.footer-label:hover {
+  color: #d1ecff;
+}
+
+.footer-tooltip {
+  display: none;
+  position: absolute;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 220px;
+  padding: 0.75rem;
+  background-color: rgba(0, 0, 0, 0.9);
+  color: #fff;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  z-index: 10;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.footer-item:hover .footer-tooltip {
+  display: block;
+  opacity: 1;
+}
